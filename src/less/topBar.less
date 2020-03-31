@@ -1,0 +1,71 @@
+@keyframes down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.top-bar {
+  height: 51px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .websit {
+    font-size: 22px;
+    font-family: "黑体";
+  }
+  .down-icon {
+    font-size: 28px;
+  }
+}
+.type-list {
+  display: none;
+  flex-wrap: wrap;
+  background: #333;
+  overflow: hidden;
+  &.show {
+    animation: down 0.3s ease-in;
+    opacity: 1;
+    display: flex;
+  }
+  &.hide {
+    opacity: 0;
+    animation: up 1s ease-out;
+  }
+  > li {
+    border-right: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    width: 33.3333%;
+    list-style: none;
+    text-align: center;
+    color: #ccc;
+    height: 58px;
+    line-height: 58px;
+    font-size: 20px;
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+.go-back {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: rgb(51, 55, 61);
+  span {
+    display: inline-block;
+    // height: 36px;
+  }
+}
+.am-search-input .am-search-clear-show {
+  height: 24px;
+}
